@@ -49,7 +49,8 @@ public class EnhetstestBankController {
         when(repository.hentTransaksjoner("01010110523","19.01.21", "26.03.21")).
                 thenReturn(enKonto);
         //act
-        Konto resultat = bankController.hentTransaksjoner("01010110523","19.01.21", "26.03.21");
+        Konto resultat = bankController.hentTransaksjoner("01010110523",
+                "19.01.21", "26.03.21");
 
         //assert
         assertEquals(enKonto, resultat);
@@ -62,7 +63,8 @@ public class EnhetstestBankController {
         when(sjekk.loggetInn()).thenReturn(null);
 
         //act
-        Konto resultat = bankController.hentTransaksjoner("01010110523","19.01.21", "26.03.21");
+        Konto resultat = bankController.hentTransaksjoner("01010110523","19.01.21",
+                "26.03.21");
 
         //assert
         assertNull(resultat);
@@ -151,7 +153,9 @@ public class EnhetstestBankController {
         //arrange
         ArrayList<Transaksjon>transaksjoner = new ArrayList<>();
 
-        Transaksjon betaling = new Transaksjon(20, "1234.56.78999",1200, "04.01.21", "Tilbakebetaling", "Avventer","1111.11.1111");
+        Transaksjon betaling = new Transaksjon(20, "1234.56.78999",
+                1200, "04.01.21", "Tilbakebetaling",
+                "Avventer","1111.11.1111");
         transaksjoner.add(betaling);
 
         String personnummer = "01010110523";
@@ -185,9 +189,15 @@ public class EnhetstestBankController {
         //arrange
         ArrayList<Transaksjon> transaksjoner = new ArrayList<>();
 
-        Transaksjon betaling1 = new Transaksjon(20, "1234.56.78999",1200, "04.01.21", "Tilbakebetaling", "Avventer","1111.11.1111");
-        Transaksjon betaling2 = new Transaksjon(30, "1234.56.78888",1300, "04.01.21", "Tilbakebetaling", "Avventer","2222.22.22222");
-        Transaksjon betaling3 = new Transaksjon(40, "1234.56.77777",1400, "04.01.21", "Tilbakebetaling", "Avventer","3333.33.33333");
+        Transaksjon betaling1 = new Transaksjon(20, "1234.56.78999",
+                1200, "04.01.21", "Tilbakebetaling",
+                "Avventer","1111.11.1111");
+        Transaksjon betaling2 = new Transaksjon(30, "1234.56.78888",
+                1300, "04.01.21", "Tilbakebetaling",
+                "Avventer","2222.22.22222");
+        Transaksjon betaling3 = new Transaksjon(40, "1234.56.77777",
+                1400, "04.01.21", "Tilbakebetaling",
+                "Avventer","3333.33.33333");
         transaksjoner.add(betaling1);
         transaksjoner.add(betaling2);
         transaksjoner.add(betaling3);
@@ -221,9 +231,15 @@ public class EnhetstestBankController {
     public void utforBetaling(){
         ArrayList<Transaksjon>transaksjoner = new ArrayList<>();
 
-        Transaksjon betaling1 = new Transaksjon(20, "1234.56.78999",1200, "04.01.21", "Tilbakebetaling", "Avventer","1111.11.1111");
-        Transaksjon betaling2 = new Transaksjon(30, "1234.56.78888",1300, "04.01.21", "Tilbakebetaling", "Avventer","2222.22.22222");
-        Transaksjon betaling3 = new Transaksjon(40, "1234.56.77777",1400, "04.01.21", "Tilbakebetaling", "Avventer","3333.33.33333");
+        Transaksjon betaling1 = new Transaksjon(20, "1234.56.78999",
+                1200, "04.01.21", "Tilbakebetaling",
+                "Avventer","1111.11.1111");
+        Transaksjon betaling2 = new Transaksjon(30, "1234.56.78888",
+                1300, "04.01.21", "Tilbakebetaling",
+                "Avventer","2222.22.22222");
+        Transaksjon betaling3 = new Transaksjon(40, "1234.56.77777",
+                1400, "04.01.21", "Tilbakebetaling",
+                "Avventer","3333.33.33333");
         transaksjoner.add(betaling1);
         transaksjoner.add(betaling2);
         transaksjoner.add(betaling3);

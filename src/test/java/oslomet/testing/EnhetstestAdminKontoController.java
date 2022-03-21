@@ -45,7 +45,8 @@ public class EnhetstestAdminKontoController {
         ArrayList<Konto> konto = new ArrayList<>();
         List<Transaksjon> transaksjoner = new ArrayList<>();
 
-        Konto enkonto = new Konto("01010110523", "1309.34.23456", 15000, "brukerkonto",
+        Konto enkonto = new Konto("01010110523", "1309.34.23456",
+                15000, "brukerkonto",
                 "Nok", transaksjoner);
         konto.add(enkonto);
 
@@ -81,10 +82,13 @@ public class EnhetstestAdminKontoController {
         ArrayList<Konto> konto = new ArrayList<>();
         ArrayList<Transaksjon>transaksjoner = new ArrayList<>();
 
-        Transaksjon t = new Transaksjon(20, "1234.56.78999",1200, "04.01.21", "Tilbakebetaling", "Avventer","1111.11.1111");
+        Transaksjon t = new Transaksjon(20, "1234.56.78999",
+                1200, "04.01.21", "Tilbakebetaling",
+                "Avventer","1111.11.1111");
         transaksjoner.add(t);
 
-        Konto konto1 = new Konto("01010110523", "1309.34.23456", 12_901.35, "Type?", "Euro", transaksjoner);
+        Konto konto1 = new Konto("01010110523", "1309.34.23456",
+                12_901.35, "Type?", "Euro", transaksjoner);
         konto.add(konto1);
 
         String p = "01010110523";
@@ -106,12 +110,17 @@ public class EnhetstestAdminKontoController {
         ArrayList<Konto> konto = new ArrayList<>();
         ArrayList<Transaksjon>transaksjoner = new ArrayList<>();
 
-        Transaksjon t1 = new Transaksjon(20, "1234.56.78999",1200, "04.01.21", "Tilbakebetaling", "Avventer","1111.11.1111");
-        Transaksjon t2 = new Transaksjon(30, "1234.56.79999",1300, "04.01.21", "Tilbakebetaling", "Avventer","1111.12.1111");
+        Transaksjon t1 = new Transaksjon(20, "1234.56.78999",
+                1200, "04.01.21", "Tilbakebetaling",
+                "Avventer","1111.11.1111");
+        Transaksjon t2 = new Transaksjon(30, "1234.56.79999",
+                1300, "04.01.21", "Tilbakebetaling",
+                "Avventer","1111.12.1111");
         transaksjoner.add(t1);
         transaksjoner.add(t2);
 
-        Konto konto1 = new Konto("01010110523", "1309.34.23456", 12_901.35, "Type?", "Euro", transaksjoner);
+        Konto konto1 = new Konto("01010110523", "1309.34.23456",
+                12_901.35, "Type?", "Euro", transaksjoner);
         konto.add(konto1);
 
         when(sjekk.loggetInn()).thenReturn(null);
@@ -129,12 +138,17 @@ public class EnhetstestAdminKontoController {
         ArrayList<Konto> konto = new ArrayList<>();
         ArrayList<Transaksjon>transaksjoner = new ArrayList<>();
 
-        Transaksjon t1 = new Transaksjon(20, "1234.56.78999",1200, "04.01.21", "Tilbakebetaling", "Avventer","1111.11.1111");
-        Transaksjon t2 = new Transaksjon(30, "1234.56.79999",1300, "04.01.21", "Tilbakebetaling", "Avventer","1111.12.1111");
+        Transaksjon t1 = new Transaksjon(20, "1234.56.78999",
+                1200, "04.01.21", "Tilbakebetaling",
+                "Avventer","1111.11.1111");
+        Transaksjon t2 = new Transaksjon(30, "1234.56.79999",
+                1300, "04.01.21", "Tilbakebetaling",
+                "Avventer","1111.12.1111");
         transaksjoner.add(t1);
         transaksjoner.add(t2);
 
-        Konto konto1 = new Konto("01010110523", "1309.34.23456", 12_901.35, "Type?", "Euro", transaksjoner);
+        Konto konto1 = new Konto("01010110523", "1309.34.23456",
+                12_901.35, "Type?", "Euro", transaksjoner);
         konto.add(konto1);
 
         String personnummer = "01010110523";
@@ -156,12 +170,15 @@ public class EnhetstestAdminKontoController {
         ArrayList<Konto> konto = new ArrayList<>();
         ArrayList<Transaksjon>transaksjoner = new ArrayList<>();
 
-        Transaksjon t1 = new Transaksjon(20, "1234.56.78999",1200, "04.01.21", "Tilbakebetaling", "Avventer","1111.11.1111");
-        Transaksjon t2 = new Transaksjon(30, "1234.56.79999",1300, "04.01.21", "Tilbakebetaling", "Avventer","1111.12.1111");
+        Transaksjon t1 = new Transaksjon(20, "1234.56.78999",1200,
+                "04.01.21", "Tilbakebetaling", "Avventer","1111.11.1111");
+        Transaksjon t2 = new Transaksjon(30, "1234.56.79999",1300,
+                "04.01.21", "Tilbakebetaling", "Avventer","1111.12.1111");
         transaksjoner.add(t1);
         transaksjoner.add(t2);
 
-        Konto konto1 = new Konto("01010110523", "1309.34.23456", 12_901.35, "Type?", "Euro", transaksjoner);
+        Konto konto1 = new Konto("01010110523", "1309.34.23456",
+                12_901.35, "Type?", "Euro", transaksjoner);
         konto.add(konto1);
 
         when(sjekk.loggetInn()).thenReturn(null);
