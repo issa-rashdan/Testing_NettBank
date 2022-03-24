@@ -1,5 +1,5 @@
 package oslomet.testing;
-import org.junit.Assert;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -62,7 +62,8 @@ public class EnhetstestSikkerhetsController {
         // arrange
         when(repository.sjekkLoggInn(anyString(),anyString())).thenReturn("OK");
 
-        // setningen under setter ikke attributten, dvs. at det ikke er mulig å sette en attributt i dette oppsettet
+
+        // denne setningen vil ikke sette en attributten og det betyr at man kan ikke sette en attributt
         session.setAttribute("Innlogget", "12345678901");
 
         // act
